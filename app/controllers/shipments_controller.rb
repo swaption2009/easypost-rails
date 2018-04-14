@@ -39,8 +39,8 @@ class ShipmentsController < ApplicationController
   end
 
   def shipping_label
-    
-    render json: @shipment
+    label = Label.new.build_doc(@shipment)
+    render json: label
   end
 
   private
