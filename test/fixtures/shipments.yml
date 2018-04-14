@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fromCompany: MyString
+  fromPhone: MyString
+  fromStreet1: MyString
+  fromStreet2: MyString
+  fromCity: MyString
+  fromState: MyString
+  fromZip: MyString
+  fromCountry: MyString
+  toCompany: MyString
+  toPhone: MyString
+  toStreet1: MyString
+  toStreet2: MyString
+  toCity: MyString
+  toState: MyString
+  toZip: MyString
+  toCountry: MyString
+  length: MyString
+  width: MyString
+  height: MyString
+  weight: MyString
+
+two:
+  fromCompany: MyString
+  fromPhone: MyString
+  fromStreet1: MyString
+  fromStreet2: MyString
+  fromCity: MyString
+  fromState: MyString
+  fromZip: MyString
+  fromCountry: MyString
+  toCompany: MyString
+  toPhone: MyString
+  toStreet1: MyString
+  toStreet2: MyString
+  toCity: MyString
+  toState: MyString
+  toZip: MyString
+  toCountry: MyString
+  length: MyString
+  width: MyString
+  height: MyString
+  weight: MyString
