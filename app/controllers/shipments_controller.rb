@@ -18,7 +18,8 @@ class ShipmentsController < ApplicationController
     @shipment = Shipment.new(shipment_params)
 
     if @shipment.save
-      render json: @shipment, status: :created, location: @shipment
+      label = Label.new.build_doc(@shipment)
+      render json: label
     else
       render json: @shipment.errors, status: :unprocessable_entity
     end
@@ -51,6 +52,25 @@ class ShipmentsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def shipment_params
-      params.require(:shipment).permit(:fromCompany, :fromPhone, :fromStreet1, :fromStreet2, :fromCity, :fromState, :fromZip, :fromCountry, :toCompany, :toPhone, :toStreet1, :toStreet2, :toCity, :toState, :toZip, :toCountry, :length, :width, :height, :weight)
+      params.require(:shipment).permit(:fromCompany,
+                                       :fromPhone,
+                                       :fromStreet1,
+                                       :fromStreet2,
+                                       :fromCity,
+                                       :fromState,
+                                       :fromZip,
+                                       :fromCountry,
+                                       :toCompany,
+                                       :toPhone,
+                                       :toStreet1,
+                                       :toStreet2,
+                                       :toCity,
+                                       :toState,
+                                       :toZip,
+                                       :toCountry,
+                                       :length,
+                                       :width,
+                                       :height,
+                                       :weight)
     end
 end
